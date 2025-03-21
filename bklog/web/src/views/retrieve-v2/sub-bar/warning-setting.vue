@@ -11,7 +11,7 @@
     <bk-badge
       v-if="badgeCount !== 0"
       style="margin-top: -12px; margin-left: -3px"
-      :count="badgeCount"
+      :val="badgeCount"
       theme="danger"
     />
 
@@ -429,7 +429,6 @@
       if (val === 'NOT_SHIELDED_ABNORMAL') {
         badgeCount.value = res?.data.length;
       }
-
       recordList.value = res?.data || [];
       originRecordList.value = recordList.value;
       panels.value[0].count = res?.data.length || 0;
